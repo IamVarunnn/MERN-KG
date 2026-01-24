@@ -1,0 +1,20 @@
+#heading{
+    background-color: orange;
+}
+
+ #first_div{
+    background-color: pink;
+}
+
+p{
+    background-color: red;
+}
+
+.head{
+    background-color: blueviolet;
+}
+
+
+#first, #second{
+    color: rgb(0, 17, 255);
+}
