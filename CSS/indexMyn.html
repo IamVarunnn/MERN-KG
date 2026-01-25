@@ -11,21 +11,37 @@
             background-color: red;
             height: 100px;
             width: 100px;
-             visibility: hidden;
+             /* visibility: hidden; */
             
         }
 
          
         .logo{
-            background-color: green;
+            
+            height: 100px;
+            width: 100px;
+            /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJVxlZO-GHUUKA6anNj0yKKSUQGxEa2lvYBA&s);
+            background-size: 25px; */
+            /* background-repeat: no-repeat;
+            background-position: top left;
+            visibility: visible; */
+
+            background: red url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJVxlZO-GHUUKA6anNj0yKKSUQGxEa2lvYBA&s) no-repeat center / 28px;
+           
+        }
+
+        #logo{
             height: 50px;
             width: 50px;
-            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJVxlZO-GHUUKA6anNj0yKKSUQGxEa2lvYBA&s);
-            background-size: 25px;
+            background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJVxlZO-GHUUKA6anNj0yKKSUQGxEa2lvYBA&s);
+            background-size: contain;
             background-repeat: no-repeat;
-            background-position: top left;
-            visibility: visible;
-           
+        }
+
+        #logo{
+            height: 50px;
+            width: 50px;
+            background: green url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJVxlZO-GHUUKA6anNj0yKKSUQGxEa2lvYBA&s) no-repeat center / 25px;
         }
 
         
@@ -34,7 +50,8 @@
 <body>
     
     <div class="box">
-        <div class="logo"></div>
+        <!-- <div class="logo"></div> -->
+        <div id="logo"></div>
     </div>
 
 </body>
