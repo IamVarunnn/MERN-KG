@@ -1,0 +1,31 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#padded{
+    
+    height: 50px;
+    width: 50px;
+    background-color: purple;
+
+    padding: 10px 2000px 10px 10px;
+    /* border: 1px solid black; */
+    /* margin: 2px; */
+    
+}
+
+#padded {
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    background-color: purple;
+    overflow: hidden;
+}
+
+
+
+        
+ 
