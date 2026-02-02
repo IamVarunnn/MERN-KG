@@ -1,0 +1,53 @@
+ 
+ .container{
+    height: 50px;
+    width: 600px;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    
+ }
+
+ .container > span{
+
+ }
+ 
+.outer{
+    height: 20px;
+    width: 600px;
+    background: yellow;
+    border-radius: 30px;
+}
+ 
+
+.inner{
+    height: 20px;
+    width: 0px;
+    background: #000;
+    border-radius: 30px;
+    animation: moving 10s ease-out 0s infinite;
+    
+    
+}
+
+
+@keyframes moving {
+    0%{
+        width: 0px;
+        background-color: black;
+    }
+    95%{
+        width: 550px;
+        background-color: black;
+    }
+    95%{
+        width: 550px;
+    }
+    100%{
+        width: 600px;
+    }
+}
+
+ 

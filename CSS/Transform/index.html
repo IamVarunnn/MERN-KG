@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .rotate{
+            height: 50px;
+            width: 50px;
+            background-color: yellow;
+            border: 2px solid green;
+            border-radius: 5px;
+            transition: all 1s ease-in;
+        
+        }
+
+        .rotate:hover{
+            /* transform: rotate(360deg); */
+            /* transform: rotateX(90deg); */
+            /* transform: scale(2); */
+            /* transform: scaleX(2); */
+            /* transform: scaleY(2); */
+            /* transform: translate(-20px); */
+            /* transform: translateX(20px); */
+            /* transform: translateY(20px); */
+            transform: skew(90deg);
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="rotate">Rotate</div>
+    
+</body>
+</html>
