@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Clone</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+ 
+
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: roboto;
+        }
+
+        .yt_logo .yt_image{
+            height: 25px;
+            padding-left: 17px;
+        }
+        .yt_logo > p{
+            font-family: 'Roboto';
+            /* font-stretch: 0; */
+            font-weight: 500;
+            font-size: 18px;
+            padding-left: 3px;
+        }
+
+        .yt_logo{
+            display: flex;
+            align-items: center;
+             
+        }
+        
+        nav{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .material-symbols-outlined{
+            padding-left: 18px;
+        }
+
+        .middle{
+            display: flex;
+            
+        }
+
+        .searchbar{
+            min-width: 500px;
+            height: 30px;
+            border: 1px solid grey;
+            position: relative;
+             
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            right: 65px;
+
+        }
+
+        .searchbar input{
+            width: 85%;
+            height: 98%;
+            position: relative;
+            left: 20px;
+            border: none;
+            /* background-color: yellow; */
+            
+        }
+
+        .search_icon{
+            padding-left: 20px;
+            width: 50px;
+            flex-grow: 1;
+            /* background-color: green; */
+            background-color: grey;
+            border-top-right-radius: 40px;
+            border-bottom-right-radius: 40px;
+             
+        }
+
+        .search_icon > span{
+            background-color: gray;
+            position: relative;
+            top: 3px;
+            height: 10px;
+        }
+
+        .microphone{
+             position: relative;
+            left: -50px;
+          
+            
+        }
+
+        .microphone > span{
+            height: 32px;
+            width: 0px;
+            background-color: rgb(167, 154, 154);
+            background-color: gray;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             
+            
+            padding-right: 18px;
+        }
+
+        .right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .create{
+            width: 100px;
+            /* background-color: green; */
+            height: 30px;
+            border: 1px solid grey;
+            border-radius: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            padding: 2px;
+            background-color: gray;
+        }
+
+
+
+        .create > span > p{
+           font-size: 25px;
+           padding-right: 5px;
+           background-color: gray;
+           
+
+        }
+
+        .profile{
+            padding-left: 20px;
+        }
+
+        .circle{
+            height: 40px;
+            width: 40px;
+            background-color: yellow;
+            border-radius: 50%;
+            margin-right: 40px;
+             
+        }
+
+        
+
+
+         
+         
+
+        
+        
+       
+
+    </style>
+
+</head>
+<body>
+    
+    <header>
+
+        <nav>
+
+            <div class="left">
+                 
+                <div class="yt_logo">
+                    <span class="material-symbols-outlined">menu</span>
+                    <img class="yt_image" src="image.png" alt="">
+                    <p class="yt_text" >YouTube</p>
+                </div>
+            </div>
+
+            <div class="middle">
+                <div class="searchbar">
+                    <input type="text" placeholder="Search">
+                    <div class="search_icon"><span class="material-symbols-outlined ">search</span></div>
+                </div>
+                <div class="microphone">
+                    <span class="material-symbols-outlined">mic</span>
+                </div>
+            </div>
+            
+            <div class="right">
+                <div class="create"><span><p>+</p></span> Create</div>
+                <div class="notificaitons"><span class="material-symbols-outlined">notifications</span></div>
+                <div class="profile"><div class="circle"></div></div>
+            </div>
+            
+
+        </nav>
+
+    </header>
+
+</body>
+</html>
