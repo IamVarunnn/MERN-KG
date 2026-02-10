@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main container */
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+/* Background image box */
+.bg_image{
+    height: 98vh;
+    width: 30vw;
+    margin: 10px;
+    background-image: url(images/image.png); /* your background */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    position: relative;
+}
+
+/* Dark cinematic overlay */
+.bg_image::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.25)
+    );
+    z-index: 0;
+}
+
+/* Make content above overlay */
+.bg_image > *{
+    position: relative;
+    z-index: 1;
+}
+
+/* Pushpa image animation */
+.aa_img{
+    min-width: 100%;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.anim-move{
+    animation: moveup 0.6s ease forwards;
+}
+
+/* Title containers */
+.title,
+.title-2,
+.title-3{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* PUSHPA */
+.title span{
+    opacity: 0;
+    font-family: 'Anton', sans-serif;
+    font-size: 48px;
+    color: #ff7a00; /* fiery orange */
+    text-shadow:
+        2px 2px 0 #000,
+        0 0 10px rgba(255, 120, 0, 0.8);
+    letter-spacing: 4px;
+    transform: translateX(60px);
+    animation: moveup 0.6s ease forwards;
+}
+
+/* THE RISE */
+.title-2 span{
+    opacity: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: #ffd166; /* gold */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    letter-spacing: 3px;
+    transform: translateX(60px);
+    animation: moveup 0.6s ease forwards;
+}
+
+/* PART-01 */
+.title-3 span{
+    opacity: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+    letter-spacing: 2px;
+    transform: translateX(60px);
+    animation: moveup 0.6s ease forwards;
+}
+
+/* Animation delays for PUSHPA */
+.title span:nth-child(1) { animation-delay: 1.0s; }
+.title span:nth-child(2) { animation-delay: 1.2s; }
+.title span:nth-child(3) { animation-delay: 1.4s; }
+.title span:nth-child(4) { animation-delay: 1.6s; }
+.title span:nth-child(5) { animation-delay: 1.8s; }
+.title span:nth-child(6) { animation-delay: 2.0s; }
+
+/* Animation delays for THE-RISE */
+.title-2 span:nth-child(1) { animation-delay: 2.2s; }
+.title-2 span:nth-child(2) { animation-delay: 2.4s; }
+.title-2 span:nth-child(3) { animation-delay: 2.6s; }
+.title-2 span:nth-child(4) { animation-delay: 2.8s; }
+.title-2 span:nth-child(5) { animation-delay: 3.0s; }
+.title-2 span:nth-child(6) { animation-delay: 3.2s; }
+.title-2 span:nth-child(7) { animation-delay: 3.4s; }
+.title-2 span:nth-child(8) { animation-delay: 3.6s; }
+
+/* Animation delays for PART-01 */
+.title-3 span:nth-child(1) { animation-delay: 3.8s; }
+.title-3 span:nth-child(2) { animation-delay: 4.0s; }
+.title-3 span:nth-child(3) { animation-delay: 4.2s; }
+.title-3 span:nth-child(4) { animation-delay: 4.4s; }
+.title-3 span:nth-child(5) { animation-delay: 4.6s; }
+.title-3 span:nth-child(6) { animation-delay: 4.8s; }
+.title-3 span:nth-child(7) { animation-delay: 5.0s; }
+
+/* Keyframes: slide from right to center */
+@keyframes moveup {
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
