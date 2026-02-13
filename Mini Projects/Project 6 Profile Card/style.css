@@ -1,0 +1,179 @@
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    height: 340px;
+    width: 280px;
+    background-color: green;
+    border-radius: 20px;
+}
+
+.top_card{
+    height: 130px;
+    width: 100%;
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative;
+}
+
+.bottom_card{
+    height: 230px;
+    width: 100%;
+    background-color: rgb(255, 225, 0);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.profile_image{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    
+    left: 50%;
+    top: 27%;
+    align-items: center;
+    height: 105px;
+    background-color: yellow;
+    /* padding: 1px; */
+    width: 105px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    border: 3px solid black;
+}
+
+.profile_image_img{
+    height: 100px;
+    border-radius: 50%;
+    padding: 2.5px;
+        
+}
+
+.bottom_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bottom_card_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+}
+
+.bottom_card_text span{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.bottom_card_text p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.bottom_card_socials{
+    display: flex;
+    /* justify-content: space-evenly; */
+    gap: 15px;
+}
+
+.facebook i{
+    color: white;
+    height: 30px;
+    width: 30px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.twitter i{
+    color: white;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(0, 234, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.instagram{
+    color: white;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(211, 0, 127);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.youtube{
+        
+    color: white;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(255, 10, 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+
+.bottom_card_buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.bottom_card_buttons button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: yellow;
+    border: none;
+    
+}
+
+.line{
+    height: 30px;
+    width: 1px;
+    background-color: green;
+}
+
+.bottom_card_desc{
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bottom_card_desc i{
+    margin-right: 3px;
+}
+
+button,i{
+    cursor: pointer;
+}
+
+    
+
+    
+
+ 
