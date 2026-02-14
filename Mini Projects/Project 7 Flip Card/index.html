@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Card</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(20, 20, 37);
+        }
+
+        .container{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card_box{
+            height: 60vh;
+            width: 70%;
+ 
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle{
+            
+            height: 280px;
+            width: 280px;
+            /* background-color:rgb(173, 29, 29); */
+            background: linear-gradient(90deg,#9c27b0,#f3f5f5);
+            border-radius: 50%;
+        }
+
+        .circle_top_left{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .circle_bottom_right{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .logo{
+            height: 40px;
+            width: 70px;
+            background-color: transparent;
+        }
+
+        .chip{
+            height: 50px;
+            position: absolute;
+            right: 30px;
+            background-color: transparent;
+        }
+
+        .card{
+            height: 270px;
+            width: 450px;
+            /* background-color: red; */
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgb(255, 255, 255,0.1);
+            box-shadow: 0 25px 45px rgba(0,0,0,0,25);
+            backdrop-filter: blur(25px);
+            z-index: 1;
+            border-radius: 30px;
+            padding: 8px 9px;
+            
+        }
+
+        header{
+            display: flex;
+            padding: 20px;
+            align-items: center;
+            position: relative;
+            background-color: transparent;
+            
+            
+        }
+
+        header div{
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+        }
+
+        header div span{
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: 200;
+            color: white;
+            background-color: transparent;
+        }
+
+        .main_text{
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            padding-left: 30px;
+            margin-top: 60px;
+            background-color: transparent;
+        }
+
+        .card_no{
+            font-size: 20px;
+            color: white;
+            font-weight: 300;
+            background-color: transparent;
+        }
+
+        .card_digits{
+            font-size: 30px;
+            color: white;
+            margin-top: 5px;
+            background-color: transparent;
+        }
+
+        .card_name{
+            color: white;
+            font-size: 20px;
+            background-color: transparent;
+            margin-top: 25px;
+        }
+
+        main{
+            position: relative;
+            background-color: transparent;
+        }
+
+        .main_text_right_bot{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: transparent;
+
+        }
+
+        .main_text_right_bot span{
+            font-size: 20px;
+            color: white;
+            background-color: transparent;
+        }
+
+        .card_box {
+            perspective: 1000px;   /* gives depth to the 3D rotation */
+        }
+
+        .card {
+            transition: transform 0.6s ease;  /* smooth animation */
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .back-card{
+             
+            
+            
+        }
+
+        .top_text{
+            height: 60px;
+            
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: transparent;
+            
+        }
+
+        .middle_line{
+            position: absolute;
+            right: 0px;
+            width: 100%;
+            height: 60px;
+            background-color: green;
+        }
+
+        .bottom_text{
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            right: 1px;
+            background-color: transparent;
+            display: flex;
+            /* justify-content: center; */
+            /* align-items: center; */
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card_box">
+
+            <div class="circle_top_left circle"></div>
+            <!-- <div class="card front-card">
+                <header>
+                    <div><img class="logo" src="images/image.png" alt=""><span>Master Card</span></div>
+                    
+                    <img class="chip" src="images/image2.png" alt="">
+                </header>
+
+                <main>
+                    <div class="main_text">
+                        <span class="card_no" >Card Number</span>
+                        <span class="card_digits">9090 9090 9090 9090</span>
+
+                        <span class="card_name" >Prem Kumar</span>
+                    </div>
+
+                    <div class="main_text_right_bot">
+                        <span>Valid Thru</span>
+                        <span>05/28</span>
+                    </div>
+
+                </main>
+            </div>  -->
+            <div class="card back-card">
+
+                <div class="top_text">
+                    <p>For Customer service call +999999999 or email to xyz@gmail.com</p>
+                </div>
+                <div class="middle_line"></div>
+                <div class="bottom_text">
+
+                    <div class="outer_div">
+                        <div class="inner_div">
+                            <span>006</span>
+                        </div>
+                    </div>
+
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maiores impedit nulla repellendus eaque natus?
+
+                </div>
+
+            </div>
+            <div class="circle_bottom_right circle"></div>
+ 
+        </div>
+
+    </div>
+
+</body>
+</html>
