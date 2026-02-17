@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            background-image: linear-gradient(#ff5722,#ffc107);
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);;
+            /* font-size: 70px; */
+            z-index: 1;
+        }
+
+        .square{
+            position: absolute;
+            border: 1px solid rgb(255, 255, 255);
+            height: 20px;
+            width: 20px;
+            opacity: 0;
+             animation: moving 10s linear infinite;
+        }
+
+        .square1{
+            top: 10vh;
+            left: 10vw;
+            animation-delay: 1s;
+           
+        }
+
+        .square2{
+            top: 50vh;
+            left: 50vw;
+            animation-delay: 1.45s;
+        }
+
+        .square3{
+            top: 20vh;
+            left: 85vw;
+             animation-delay: 2.2s;
+        }
+
+        .square4{
+            top: 70vh;
+            left: 90vw;
+             animation-delay: 3s;
+        }
+
+        .square5{
+            top: 70vh;
+            left: 5vw;
+             animation-delay: 3.8s;
+        }
+
+        @keyframes moving {
+            0%{
+                transform: scale(0) rotateY(0deg);
+                opacity: 1;
+            }
+            100%{
+                transform: scale(3) rotateY(1000deg);
+                opacity: 0;
+            }
+        }
+
+        .circle{
+            position: absolute;
+            border: 1px solid rgb(255, 255, 255);
+            height: 20px;
+            width: 20px;
+            opacity: 0;
+             animation: circle 10s linear infinite;
+        }
+
+        .circle1{
+            left: 10vw;
+             animation-delay: 1s;
+        }
+
+        .circle2{
+            left: 35vw;
+             animation-delay: 1.75s;
+        }
+        .circle3{
+            left: 70vw;
+             animation-delay: 2.2s;
+        }
+        .circle4{
+            left: 90vw;
+             animation-delay: 3s;
+        }
+
+        
+
+        @keyframes circle {
+            0%{
+                transform: scale(0) rotate(0deg);
+                opacity: 1;
+                bottom: 0;
+                border-radius: 0;
+            }
+            100%{
+                 transform: scale(5) rotate(1000deg);
+                opacity: 0;
+                bottom: 90vh;
+                border-radius: 50%;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <h1>Welcome Everyone</h1>
+        <div class="squares">
+            <div class="square square1"></div>
+            <div class="square square2"></div>
+            <div class="square square3"></div>
+            <div class="square square4"></div>
+            <div class="square square5"></div>
+        </div>
+        <div class="circles">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+            <div class="circle circle4"></div>
+        </div>
+        
+    </div>
+
+    
+
+</body>
+</html>
