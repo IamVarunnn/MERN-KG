@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            height: 100vh;
+            
+           
+            background-image:linear-gradient(#21b3e1, #FFF), url(images/cloud.png);
+            overflow: hidden;
+            position: relative;
+        }
+
+         
+        header{
+           margin-top: 10px;
+            border-bottom: 1px solid white;
+           width: 100%;
+        }
+
+        .nav_left img{
+            height: 50px;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 150px;
+        }
+        a{
+            text-decoration: none;
+            color: wheat;
+        }
+
+         
+
+        .nav_links{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 60px;
+
+        }
+
+        .drop img{
+            height: 20px;
+        }
+
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .socials_links{
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .socials_links img{
+            height: 20px;
+        }
+
+        .search_bar{
+            width: 400px;
+            display: flex;
+            gap: 10px;
+            padding: 5px 10px;
+            border-radius: 30px;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgb(248, 248, 248);
+            
+        }
+
+        .search_bar input{
+            /* height: 30px; */
+
+            flex-grow: 1;
+            outline: white;
+            background-color: transparent;
+            border: none;
+        }
+
+        .plane{
+            position: absolute;
+            top: 30%;
+            
+        }
+
+        .ballon .image_middle{
+            height: 300px;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .ballon .image_left{
+             height: 200px;
+            position: absolute;
+            top: 70%;
+            left: 30%;
+            transform: translate(-50%,-50%);
+             opacity: 0.5;
+        }
+
+        .ballon .image_right{
+            height: 200px;
+            position: absolute;
+            top: 70%;
+            /* right: 10%; */
+            left: 70%;
+            transform: translate(-50%,-50%);
+            opacity: 0.5;
+        }
+
+        .play_button{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .play_button img{
+            height: 50px;
+            
+        }
+
+        .clouds img{
+            width: 100%;
+            /* position: absolute; */
+            z-index: -1;
+        }
+
+        
+
+        
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+       
+
+        <header>
+
+            <nav>
+
+                <div class="nav_left">
+                    <div class="logo"><img src="images/logo.png" alt=""></div>
+                </div>
+
+                <div class="nav_middle">
+                    <div class="nav_links">
+                        <a href="#">Home</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Servics</a>
+                        <a href="#">About</a>
+                    </div>
+                </div>
+
+                <div class="nav_right">
+                    <div class="drop">
+                        <img src="images/menu.png" alt="">
+                    </div>
+                </div>
+
+            </nav>
+
+        </header>
+
+        <main>
+
+            
+
+             
+
+            <div class="socials_links">
+                <div class="instagram"><img src="images/instagram.png" alt=""></div>
+                <div class="facebook"><img src="images/facebook.png" alt=""></div>
+                <div class="twitter"><img src="images/twitter.png" alt=""></div>
+                <div class="youtube"><img src="images/youtube.png" alt=""></div>
+
+            </div>
+
+            <div class="search_bar">
+                <input type="text" placeholder="Search"><img src="images/search.png" alt="">
+            </div>
+
+            <div class="plane">
+                <img src="images/plane.png" alt="">
+            </div>
+
+            <div class="ballon">
+                <img class="image_middle" src="images/balloon.png" alt="">
+                <img class="image_left" src="images/balloon.png" alt="">
+                <img class="image_right" src="images/balloon.png" alt="">
+            </div>
+
+            <div class="play_button">
+                <img src="images/play.png" alt="">
+            </div>
+
+        </main>
+
+         <div class="clouds">
+                <img src="images/cloud.png" alt="">
+        </div>
+
+    </div>
+
+    
+</body>
+</html>
