@@ -1,0 +1,27 @@
+ 
+.button1{
+    color: yellow;
+    background-color: black;
+}
+
+i{
+    color: red;
+    margin-right: 5px;
+}
+
+.addtobag{
+    border-radius: 10px;
+    padding: 5px 20px;
+    border: none;
+    background-color: rgb(22, 216, 22);
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+}
+
+.wishlist{
+    padding: 3px 40px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+ 
