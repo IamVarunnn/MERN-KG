@@ -24,9 +24,13 @@
             color: white;
         }
 
+        
+
+          
+
         .container{
             height: 100vh;
-            width: 100%;
+            width: 100vw;
             padding-top: 30px;
             position: relative;
         }
@@ -57,8 +61,6 @@
         .sign_up{
             position: absolute;
             right: 40px;
-            
-
              
         }
 
@@ -191,6 +193,35 @@
            background-color: transparent;
             
         }
+
+        .nav_middle a {
+            position: relative;   /* anchor becomes reference */
+        }
+
+        .nav_middle a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0%;             /* start hidden */
+            height: 3px;           /* visible line */
+            background-color: rgb(220, 68, 68);
+            transition: width 0.3s ease;
+            transform-origin: right;
+         
+        }
+
+        .nav_middle a:hover::before{
+            width: 100%;
+            /* transform-origin: left; */
+            
+        }
+
+ 
+       
+         
+
+        
         
 
          

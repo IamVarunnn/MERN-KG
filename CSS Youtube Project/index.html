@@ -43,14 +43,24 @@
             display: flex;
             justify-content: space-between;
             margin-top: 10px;
+            /* border: 1px solid white; */
         }
 
         .material-symbols-outlined{
             padding-left: 18px;
         }
 
+        .left{
+            position: relative;
+            top: 5px;
+            left: 10px;
+        }
+
         .middle{
             display: flex;
+            position: relative;
+            top: 3px;
+            left: 60px;
             
         }
 
@@ -120,12 +130,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            right: 10px;
         }
 
         .create{
             width: 100px;
             /* background-color: green; */
-            height: 30px;
+            height: 25px;
             border: 1px solid grey;
             border-radius: 40px;
             display: flex;
@@ -156,7 +168,91 @@
             background-color: yellow;
             border-radius: 50%;
             margin-right: 40px;
+            /* margin-top: 5px; */
+            position: relative;
+            top: 1px;
              
+        }
+
+        .noti{
+            font-size: 30px;
+        }
+
+        .sidebar{
+            width: 70px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            left: 10px;
+            top: 30px;
+
+        }
+
+        .sidebar .material-symbols-outlined{
+            font-size: 25px;
+            margin-bottom: 40px;
+        }
+
+        a{
+            text-decoration: none;
+             
+        }
+
+        .home{
+            display: flex;
+            flex-direction: column;
+             
+        }
+
+        .home > .text{
+            text-align: center;
+            position: relative;
+            top: -20px;
+        }
+
+        .home > .text2{
+            position: relative;
+            top: -20px;
+            left: -4px;
+        }
+
+        .thumbnails{
+            height: 90vh;
+            width: 91%;
+            position: relative;
+            top: -320px;
+            left: 120px;
+            border: 1px solid green;
+
+        }
+
+        
+
+        .firstrow{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+           
+        }
+
+        .firstrow img{
+            padding: 10px;
+            height: 300px;
+            width: 400px;
+            
+        }
+
+        .action_buttons{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .action_buttons > a{
+            /* padding-top: 10px; */
+            margin-top: 10px;
+            
+            padding: 10px;
+            border: 1px solid green;
         }
 
         
@@ -199,7 +295,7 @@
             
             <div class="right">
                 <div class="create"><span><p>+</p></span> Create</div>
-                <div class="notificaitons"><span class="material-symbols-outlined">notifications</span></div>
+                <div class="notificaitons"><span class="material-symbols-outlined noti">notifications</span></div>
                 <div class="profile"><div class="circle"></div></div>
             </div>
             
@@ -207,6 +303,57 @@
         </nav>
 
     </header>
+
+    <main>
+        
+        <aside>
+
+            <div class="sidebar">
+                <div class="home"><a href="#"><span class="material-symbols-outlined">home</span></a>
+                    <a href="#" class="text" >Home</a>
+                </div>
+                <div class="home"><a href="#"><span class="material-symbols-outlined">animated_images</span></a>
+                    <a href="#" class="text">Shorts</a>
+                </div>
+                <div class="home">
+                    <a href="#"><span class="material-symbols-outlined">subscriptions</span></a>
+                    <a href="#" class="text2">Subscriptions</a>
+                </div>
+                <div class="home">
+                    <a href="#"><span class="material-symbols-outlined">account_circle</span></a>
+                    <a href="#" class="text">You</a>
+                </div>
+            </div>
+
+        </aside>
+
+        
+
+        <div class="thumbnails">
+            <div class="action_buttons">
+            <a href="#">ALL</a>
+            <a href="#">ALL</a>
+            <a href="#">ALL</a>
+            <a href="#">ALL</a>
+            <a href="#">ALL</a>
+            <a href="#">ALL</a>
+            <a href="#">ALL</a>
+            <a href="#">ALL</a>
+            <a href="#">ALL</a>
+            <a href="#">ALL</a>
+        </div>
+
+            <div class="firstrow">
+                <img src="./images/thumbnails/Screenshot 2026-02-05 114542.png" alt="">
+                <img src="./images/thumbnails/Screenshot 2026-02-05 114542.png" alt="">
+                <img src="./images/thumbnails/Screenshot 2026-02-05 114542.png" alt="">
+                <img src="./images/thumbnails/Screenshot 2026-02-05 114542.png" alt="">
+                <img src="./images/thumbnails/Screenshot 2026-02-05 114542.png" alt="">
+                <img src="./images/thumbnails/Screenshot 2026-02-05 114542.png" alt="">
+            </div>
+        </div>
+
+    </main>
 
 </body>
 </html>
