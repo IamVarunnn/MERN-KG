@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Bag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <button class="addtobag " >Add to Bag</button>
+    <button class="wishlist" >MOVE TO WISHLIST</button>
+    <button class="sale-item addtobag1" >Add 1 + 1 sale item</button>
+
+    <h1>Your Bag has <span>0</span> items</h1>
+
+</body>
+
+<script>
+
+    let val = 0;
+
+    let addtobag = document.querySelector(".addtobag");
+    let wishlist = document.querySelector(".wishlist");
+    let saleItem = document.querySelector(".sale-item");
+
+    let spanItem = document.querySelector("span");
+
+    addtobag.addEventListener("click",()=>{
+        val+=1;
+        spanItem.innerHTML = val;
+    });
+
+    wishlist.addEventListener("click",()=>{
+        alert("Added to wishlist");
+    });
+
+    saleItem.addEventListener("click",()=>{
+        val+=2;
+        spanItem.innerHTML = val;
+    });
+
+
+</script>
+
+</html>
