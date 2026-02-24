@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+
+        .container{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculator{
+            height: 400px;
+            width: 300px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+             
+        }
+
+        .input{
+            width: 100%;
+            height: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+
+        input{
+            width: 240px;
+            padding: 10px;
+
+        }
+
+        .key{
+           height: 80%;
+           width: 230px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            
+
+         
+        }
+
+        .keys{
+            height: 40px;
+            width: 40px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+ 
+
+    </style>
+
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <div class="calculator">
+
+            <div class="input">
+                <input type="text">
+            </div>
+            <div class="key">
+                <button class="keys keyss one" onclick="">1</button>
+                <button class="keys keyss two">2</button>
+                <button class="keys keyss three">3</button>
+                <button class="keys keyss four">4</button>
+                <button class="keys keyss five">5</button>
+                <button class="keys keyss six">6</button>
+                <button class="keys keyss seven">7</button>
+                <button class="keys keyss eight">8</button>
+                <button class="keys keyss nine">9</button>
+                <button class="keys keyss zero">0</button>
+                <button class="keys clear" onclick="inputField.value = '' " >C</button>
+                <button class="keys keyss add">+</button>
+                <button class="keys keyss sub">-</button>
+                <button class="keys keyss mul">*</button>
+                <button class="keys keyss divs">/</button>
+                <button class="keys equal" onclick="
+                const res = eval(inputField.value);
+                inputVal = res; 
+
+                inputVal = ''
+                " >=</button>
+                <button class="keys keyss dot">.</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+<script>
+    let inputVal = '';
+    let inputField = document.querySelector("input");
+
+    let keyss = document.querySelectorAll(".keyss");
+
+    for(let i = 0; i < keyss.length; i++){
+        keyss[i].addEventListener("click",()=>{
+            let keyVal = keyss[i].innerText;
+            
+            inputVal = inputVal + keyVal;
+
+            inputField.value = inputVal;
+        });
+    }
+    
+</script>
+</html>
