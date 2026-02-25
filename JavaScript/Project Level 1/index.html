@@ -7,12 +7,15 @@
 
     <style>
 
+       
+
         .container{
-            height: 100vh;
+            height: 90vh;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+            box-sizing: border-box;
         }
 
         .calculator{
@@ -23,7 +26,8 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 30px 10px;
+            
              
         }
 
@@ -80,28 +84,73 @@
                 <input type="text">
             </div>
             <div class="key">
-                <button class="keys keyss one" onclick="">1</button>
-                <button class="keys keyss two">2</button>
-                <button class="keys keyss three">3</button>
-                <button class="keys keyss four">4</button>
-                <button class="keys keyss five">5</button>
-                <button class="keys keyss six">6</button>
-                <button class="keys keyss seven">7</button>
-                <button class="keys keyss eight">8</button>
-                <button class="keys keyss nine">9</button>
-                <button class="keys keyss zero">0</button>
-                <button class="keys clear" onclick="inputField.value = '' " >C</button>
-                <button class="keys keyss add">+</button>
-                <button class="keys keyss sub">-</button>
-                <button class="keys keyss mul">*</button>
-                <button class="keys keyss divs">/</button>
+                <button class="keys keyss one" 
+                    onclick="
+                    content = content + '1';
+                    inputField.value = content;
+                    ">1</button>
+                <button class="keys keyss two" onclick="
+                    content = content + '2';
+                    inputField.value = content;
+                    ">2</button>
+                <button class="keys keyss three" onclick="
+                    content = content + '3';
+                    inputField.value = content;
+                    ">3</button>
+                <button class="keys keyss four" onclick="
+                    content = content + '4';
+                    inputField.value = content;
+                    ">4</button>
+                <button class="keys keyss five" onclick="
+                    content = content + '5';
+                    inputField.value = content;
+                    ">5</button>
+                <button class="keys keyss six" onclick="
+                    content = content + '6';
+                    inputField.value = content;
+                    ">6</button>
+                <button class="keys keyss seven" onclick="
+                    content = content + '7';
+                    inputField.value = content;
+                    ">7</button>
+                <button class="keys keyss eight" onclick="
+                    content = content + '8';
+                    inputField.value = content;
+                    ">8</button>
+                <button class="keys keyss nine" onclick="
+                    content = content + '9';
+                    inputField.value = content;
+                    ">9</button>
+                <button class="keys keyss zero" onclick="
+                    content = content + '0';
+                    inputField.value = content;
+                    ">0</button>
+                <button class="keys clear" onclick="content =  '';
+                inputField.value = content " >C</button>
+                <button class="keys keyss add" onclick="
+                    content = content + '+';
+                    inputField.value = content;
+                    ">+</button>
+                <button class="keys keyss sub" onclick="
+                    content = content + '-';
+                    inputField.value = content;
+                    ">-</button>
+                <button class="keys keyss mul" onclick="
+                    content = content + '*';
+                    inputField.value = content;
+                    ">*</button>
+                <button class="keys keyss divs" onclick="
+                    content = content + '/';
+                    inputField.value = content;
+                    ">/</button>
                 <button class="keys equal" onclick="
-                const res = eval(inputField.value);
-                inputVal = res; 
-
-                inputVal = ''
-                " >=</button>
-                <button class="keys keyss dot">.</button>
+                    content = eval(content);
+                    inputField.value = content;
+                    ">=</button>
+                <button class="keys keyss dot" onclick="
+                    content = content + '.';
+                    inputField.value = content;
+                    ">.</button>
             </div>
 
         </div>
@@ -110,20 +159,8 @@
 
 </body>
 <script>
-    let inputVal = '';
+    let content = "";
     let inputField = document.querySelector("input");
-
-    let keyss = document.querySelectorAll(".keyss");
-
-    for(let i = 0; i < keyss.length; i++){
-        keyss[i].addEventListener("click",()=>{
-            let keyVal = keyss[i].innerText;
-            
-            inputVal = inputVal + keyVal;
-
-            inputField.value = inputVal;
-        });
-    }
-    
+    inputField.value = content;
 </script>
 </html>
