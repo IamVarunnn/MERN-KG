@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <h1>The Great Cricker Game</h1>
+        <h2>The winner is <span>User</span></h2>
+
+        <button class="bat 1" onclick="
+            let randNo = Math.round(Math.random() * 2) + 1;
+            let computerChoice = '';
+            console.log(randNo);
+
+            if(randNo == 1){
+                computerChoice = 'Bat';
+            }
+            else if(randNo == 2){
+                computerChoice = 'Ball';
+            }
+            else{
+                computerChoice = 'Wicket';
+            }
+            if(computerChoice == 'Ball'){
+                alert('User Won');
+            }
+            else if(computerChoice == 'Wicket'){
+                alert('Computer Won');
+            }
+            else{
+                alert('Tie');
+            }
+        " >Bat</button>
+        <button class="ball 2" onclick="
+            randNo = Math.round(Math.random() * 2) + 1;
+            computerChoice = '';
+console.log(randNo);
+            if(randNo == 1){
+                computerChoice = 'Bat';
+            }
+            else if(randNo == 2){
+                computerChoice = 'Ball';
+            }
+            else{
+                computerChoice = 'Wicket';
+            }
+            if(computerChoice == 'Wicket'){
+                alert('User Won');
+            }
+            else if(computerChoice == 'Bat'){
+                alert('Computer Won');
+            }
+            else{
+                alert('Tie');
+            }
+        ">Ball</button>
+        <button class="wicket 3" onclick="
+            randNo = Math.round(Math.random() * 2) + 1;
+            computerChoice = '';
+console.log(randNo);
+            if(randNo == 1){
+                computerChoice = 'Bat';
+            }
+            else if(randNo == 2){
+                computerChoice = 'Ball';
+            }
+            else{
+                computerChoice = 'Wicket';
+            }
+            if(computerChoice == 'Bat'){
+                alert('User Won');
+            }
+            else if(computerChoice == 'Ball'){
+                alert('Computer Won');
+            }
+            else{
+                alert('Tie');
+            }
+        " >Wicket</button>
+    </div>
+
+</body>
+
+<script>
+
+    let headingtwo = document.querySelector("h2");
+    
+    console.log(randNo);
+    randNo = Math.round(Math.random() * 2) + 1;
+    
+    // console.log(computerChoice);
+
+    
+
+     
+
+
+
+    
+
+</script>
+
+</html>
