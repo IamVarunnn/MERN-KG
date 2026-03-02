@@ -27,10 +27,10 @@
             showRes('Ball',computerChoice,res);
             
         ">Ball</button>
-        <button class="wicket 3" onclick="
+        <button class="Wicket 3" onclick="
             computerChoice = randNoGen();
-            res = getResult('wicket',computerChoice);
-            showRes('wicket',computerChoice,res);
+            res = getResult('Wicket',computerChoice);
+            showRes('Wicket',computerChoice,res);
              
             
         " >Wicket</button>
@@ -41,7 +41,7 @@
 <script>
 
     let headingtwo = document.querySelector("h2");
-        let spanText = document.querySelector("span").innerText;
+        let spanText = document.querySelector("span");
   
  
     
@@ -101,6 +101,7 @@
      
 
     function showRes(userChoice, computerChoice, res){
+        spanText.innerText = res;
         alert(`Your choice is ${userChoice} and computer choise is ${computerChoice}, So ${ spanText =  res}`)
     }
 
