@@ -1,0 +1,140 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <h1>The Great Cricker Game</h1>
+        <h2>The winner is <span>User</span></h2>
+
+        <button class="bat 1" onclick="
+           
+           
+   
+            let computerChoice = randNoGen();
+            let res = getResult('Bat',computerChoice);
+            showRes('Bat',computerChoice,res);
+        " >Bat</button>
+        <button class="Ball 2" onclick="
+            computerChoice = randNoGen();
+            res = getResult('Ball',computerChoice);
+            showRes('Ball',computerChoice,res);
+            
+        ">Ball</button>
+        <button class="Wicket 3" onclick="
+            computerChoice = randNoGen();
+            res = getResult('Wicket',computerChoice);
+            showRes('Wicket',computerChoice,res);
+             
+            
+        " >Wicket</button>
+    </div>
+
+</body>
+
+<script>
+
+    let score = {
+        userWon : 0,
+        userLost : 0,
+        tie : 0,
+    };
+
+    let headingtwo = document.querySelector("h2");
+        let spanText = document.querySelector("span");
+  
+ 
+    
+    // console.log(computerChoice);
+    
+    function randNoGen(){
+       
+        let randNo = Math.round(Math.random() * 2) + 1;
+        if(randNo == 1){
+            return 'Bat';
+        }
+        else if(randNo == 2){
+            return 'Ball';
+        }
+        else{
+            return 'Wicket';
+        }
+        return 'No choice selected';
+    }
+
+    function getResult(userChoice, computerChoice){
+        if(userChoice == 'Bat'){
+            if(computerChoice == 'Ball'){
+                score.userWon++;
+                return 'User Won';
+            }
+            else if(computerChoice == 'Wicket'){
+                score.userLost++;
+                return 'Computer Won';
+            }
+            else{
+                score.tie++;
+                return 'Tie';
+            }
+        }
+        else if(userChoice == 'Ball'){
+            if(computerChoice == 'Bat'){
+                score.userLost++;
+                return 'Computer Won';
+            }
+            else if(computerChoice == 'Wicket'){
+                score.userWon += 1;
+                return 'User Won';
+            }
+            else{
+                score.tie++;
+                return 'Tie';
+            }
+        }
+        else if(userChoice == 'Wicket'){
+            if(computerChoice == 'Bat'){
+                score.userWon++;
+                return 'User Won';
+            }
+            else if(computerChoice == 'Ball'){
+                score.userLost++;
+                return 'Computer Won';
+            }
+            else{
+                score.tie++;
+                return 'Tie';
+            }
+        }
+    }
+
+     
+
+    function showRes(userChoice, computerChoice, res){
+        console.log(score);
+        spanText.innerText = res;
+        alert(`Your choice is ${userChoice} and computer choise is ${computerChoice}
+
+        So ${ spanText =  res}
+        
+        Won : ${score.userWon}, Lost : ${score.userLost}, Tie : ${score.tie}
+        `)
+    }
+
+
+    
+
+     
+
+
+
+    
+
+</script>
+
+</html>
