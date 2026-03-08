@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button>Click Me</button>
+    <h3></h3>
+
+</body>
+
+<script>
+
+    let count = 0;
+   
+    
+    let heading = document.querySelector("h3");
+   
+    let btn = document.querySelector("button");
+
+    btn.addEventListener("click",()=>{
+         
+        ++count;
+        heading.innerText = count;
+        if(count % 2 == 0){
+            document.body.style.backgroundColor = "Green";
+        }
+        else{
+            document.body.style.backgroundColor = "Yellow";
+        }
+
+        localStorage.setItem('count',count);
+
+        let getCOunt = localStorage.getItem('count');
+        heading.innerText = getCOunt;
+
+    });
+     
+
+  
+
+</script>
+
+</html>

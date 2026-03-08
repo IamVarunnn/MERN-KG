@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+
+</body>
+<script>
+
+    let heading = document.createElement("h1");
+    console.log(heading);
+    let name = prompt('Enter your name');
+
+    let myDate = new Date();
+    console.log(myDate);
+
+    let getHours = myDate.getHours();
+    let getMinutes = myDate.getMinutes();
+    // let getHours = myDate.getHours();
+
+    if((getHours >= '00' && getMinutes >= '00') && (getHours <= '11' && getMinutes <= '59')){
+        heading.innerText = `Hello ${name} Good Morning and the time is ${getHours} : ${getMinutes} AM`;
+        // console.log(`Hello ${name} Good Morning and the time is ${getHours} : ${getMinutes} AM`);
+    }
+    else if((getHours >= '12' && getMinutes >= '00') && (getHours <= '18' && getMinutes <= '59')){
+        heading.innerText = `Hello ${name} Good Evening and the time is ${getHours} : ${getMinutes} PM`
+        // console.log(`Hello Good Evening`);
+    }
+    else{
+         heading.innerText = `Hello ${name} Good Night and the time is ${getHours} : ${getMinutes} PM`
+        // console.log(`Hello Good Night`);
+    }
+
+    document.body.appendChild(heading);
+
+</script>
+</html>
