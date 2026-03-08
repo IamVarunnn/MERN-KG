@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <style>
+
+        /* .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        } */
+
+        body{
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .mybtn{
+             height: 100px;
+            width: 100px;
+            border: none;
+            margin: 10px;
+            background-color: rgb(164, 212, 130);
+            /* border-radius: 50px; */
+            cursor: pointer;
+        }
+        
+
+        button img{
+            height: 75px;
+            /* width: 100px; */
+        }
+
+    </style>
+</head>
+<body>
+
+     
+        <h1>Bat Ball Stump Game</h1>
+        
+        <button class="mybtn" onclick="
+        
+            let randomNumber = randNoGen();
+            let computerChoice = computerChoiceFun(randomNumber);
+            let userChoice = 'Bat';
+            let finalResult = playChoice(userChoice, computerChoice);
+            
+            console.log(finalResult);
+            console.log(computerChoice);
+            
+         
+            showRes(userChoice, computerChoice, finalResult);
+
+        " ><img src="images/bat.png" alt=""></button>
+        <button class="mybtn" onclick="
+            
+            randomNumber = randNoGen();
+            computerChoice = computerChoiceFun(randomNumber);
+            userChoice = 'Ball';
+            finalResult = playChoice(userChoice, computerChoice);
+            
+            console.log(finalResult);
+            console.log(computerChoice);
+            
+         
+            showRes(userChoice, computerChoice, finalResult);
+            
+        " ><img src="images/ball.png" alt=""></button>
+        <button class="mybtn" onclick="
+            randomNumber = randNoGen();
+            computerChoice = computerChoiceFun(randomNumber);
+            userChoice = 'Wicket';
+            finalResult = playChoice(userChoice, computerChoice);
+            
+            
+         
+            console.log(finalResult);
+            
+
+            showRes(userChoice, computerChoice, finalResult);
+         
+        " ><img src="images/wicket.png" alt=""></button>
+        <h3 class="usermove"></h3>
+        <h3 class="computermove"></h3>
+        <h3 class="result"></h3>
+        <h3 class="totalmatches one"></h3>
+         <button onclick="reset(); removeclassList();" >Reset</button>
+
+       
+
+  
+
+</body>
+<script>
+    // let score;
+    // let scoreStr = localStorage.getItem('score');
+    
+    // if(scoreStr !== undefined || scoreStr !== null){
+    //     score = JSON.parse(scoreStr);
+    // }
+    // else{ 
+    //     score = {
+    //         win : 0,
+    //         lost : 0,
+    //         tie : 0,
+    //     };
+    // }
+
+    let score = JSON.parse(localStorage.getItem('score')) || {
+        win: 0,
+        lost: 0,
+        tie: 0
+    };
+
+
+    function reset(){
+        localStorage.removeItem('score');
+        score = {
+            win : 0,
+            lost : 0,
+            tie : 0,
+        };
+    }
+
+    
+
+    
+
+
+    function randNoGen(){
+        let randNo = Math.floor(Math.random() * 3);
+        return randNo;
+    }
+
+    function computerChoiceFun(randomNumber){
+        
+        if(randomNumber == 0){
+            return 'Bat';
+        }
+        else if(randomNumber == 1){
+            return 'Ball';
+        }
+        else{
+            return 'Wicket';
+        }
+    }
+
+    function playChoice(userChoice, computerChoice){
+        
+        if(userChoice === 'Bat'){
+            if(computerChoice === 'Ball'){
+                score.win++;
+                return 'User Won';
+                
+            }
+            else if(computerChoice === 'Wicket'){
+                score.lost++;
+                return 'Computer Won';
+                
+            }
+            else{
+                score.tie++;
+               return 'Tie';
+              
+            }
+        }
+        else if(userChoice == 'Ball'){
+            if(computerChoice === 'Ball'){
+                score.tie++;
+                return 'Tie';
+            }
+            else if(computerChoice === 'Wicket'){
+               score.win++;
+                return 'User Won';
+            }
+            else{
+                score.lost++;
+                return 'Computer Won';
+            }
+        }
+        else if(userChoice === 'Wicket'){
+            if(computerChoice === 'Wicket'){
+                 score.tie++;
+                return 'Tie';
+            }
+            else if(computerChoice === 'Ball'){
+               score.win++;
+                return 'User Won';
+            }
+            else{
+                score.lost++;
+                return 'Computer Won';
+            }
+        }
+    }
+
+    function showRes(userChoice, computerChoice, result){
+        // alert(` The user choose ${userChoice} and the computer choose ${computerChoice} and the result is ${result}
+
+        //         The total no of matches with wins ${score.win} lost ${score.lost} tie ${score.tie}
+        // `);
+
+        let usermove = document.querySelector(".usermove");
+        usermove.innerText = `The user choice is ${userChoice}`;
+
+        let computerchoice = document.querySelector(".computermove");
+        computerchoice.innerText = `The computer choice is ${computerChoice}`;
+
+        let resultFinal = document.querySelector(".result");
+
+        resultFinal.innerText = `So ${result}`;
+
+        let noOfMatches = document.querySelector(".totalmatches");
+        noOfMatches.innerText = `No of matches Won ${score.win} Lost ${score.lost} Tie ${score.tie}`
+
+        let jsonCon = JSON.stringify(score);
+        localStorage.setItem('score',jsonCon);
+    }
+
+    function removeclassList(){
+        let heading = document.querySelectorAll("h3");
+        
+        heading.forEach(h => h.innerText = "");
+        
+        let one = document.querySelector(".one");
+        one.innerText = `No of matches Won ${score.win} Lost ${score.lost} Tie ${score.tie}`
+    }
+
+    
+    
+ 
+
+// Let Bat -> 0
+// Let Ball -> 1
+// Let Wicket -> 2
+</script>
+</html>
