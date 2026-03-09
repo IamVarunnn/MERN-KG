@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // let arr = [5, 6];
+    // arr.unshift(4);
+    // arr.push(7);
+
+    // console.log(arr);
+
+
+    // let k = 4;
+    // let newArr = [1, 2, 3, 4, 5, 6, 7];
+
+    // function posRe(arr, k){
+
+    //     for(let i = 0; i < newArr.length; i++){
+    //         if(newArr[i] == k){
+    //             return i;
+    //         }
+    //     }
+    // }
+
+    // console.log(posRe(newArr, k));
+
+    // let arr = [1, 2, 3, 4, 5, 6];
+    // let newArr = arr.splice(0,6);
+    // console.log(newArr);
+
+    
+    // let arr = [];
+
+    // for(let i = 10; i >= 1; i--){
+    //     arr.push(i);
+    // }
+
+    // console.log(arr);
+
+    let arr = [1, -6, 5, 6, -9];
+    // let n = arr.length;
+    // let posArr = [];
+
+    // for(let i = 0; i < n; i++){
+    //     if(arr[i] < 0){
+    //         continue;
+    //     }
+    //     posArr.push(arr[i]);
+    // }
+
+    // console.log(posArr);
+
+    // let array = ['KG ', 'Coding ', 'Javascript ', 'Course ', 'is ', 'Best '];
+    // let n = array.length;
+    // let str = ''
+    // for(let i = 0; i < n; i++){
+    //     str += array[i];
+    // }
+
+    // console.log(str);
+
+
+    function isPrime(num){
+
+        if(num == 2){
+            return true;
+        }
+
+        for(let i = 2; i < num; i++){
+            if(num % i == 0){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+   
+
+    let num = 2;
+
+    let i = 0;
+
+    // while(i < 5){
+    //     if(isPrime(num)){
+    //         console.log(num);
+    //         i++;
+    //     }
+    //     num++;
+        
+    // }
+
+    while(true){
+        if(isPrime(num)){
+            console.log(num);
+           
+
+            if(i == 5){
+                break;
+            }
+            i++;
+        }
+        num++;
+    }
+
+    
+
+   
+
+    
+
+</script>
+</html>
