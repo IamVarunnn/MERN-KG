@@ -7,37 +7,51 @@
 </head>
 <body>
 
-    <button>Click Me</button>
+    <button onclick="counter()" >Click Me</button>
     <h3></h3>
+    <button onclick="reset()";  >Reset</button>
 
 </body>
 
 <script>
 
-    let count = 0;
-   
     
-    let heading = document.querySelector("h3");
-   
-    let btn = document.querySelector("button");
+    let count = localStorage.getItem('count') || 0;
+    document.querySelector("h3").innerText = count;
 
-    btn.addEventListener("click",()=>{
-         
-        ++count;
-        heading.innerText = count;
+    function reset(){
+        localStorage.clear('count');
+        document.querySelector("h3").innerText = 0;
+        count = 0;
+    }
+
+    function counter(){
+        
+        count++;
+        console.log(count);
+
+        let h3 = document.querySelector("h3");
+        h3.innerText = count;
+
         if(count % 2 == 0){
-            document.body.style.backgroundColor = "Green";
+            document.body.style.backgroundColor = "green";
         }
         else{
-            document.body.style.backgroundColor = "Yellow";
+            document.body.style.backgroundColor = "yellow";
         }
 
         localStorage.setItem('count',count);
+        
+    }
 
-        let getCOunt = localStorage.getItem('count');
-        heading.innerText = getCOunt;
+    
+    console.log(count);
 
-    });
+
+    
+
+ 
+   
      
 
   
