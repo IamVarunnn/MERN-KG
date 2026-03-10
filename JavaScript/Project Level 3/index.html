@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+        .container{
+           margin-top: 20px;
+            display: flex;
+            gap: 30px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .todo_list_items{
+            display: flex;
+            gap: 20px;
+        }
+
+        .todo_list{
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+        }
+
+        .todo_list input{
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .Task,.Date{
+            width: 100px;
+            padding: 10px;
+        }
+
+        .list{
+            display: flex;
+            gap: 40px;
+        }
+
+        .input_button{
+            width: 70px;
+            border: none;
+            background-color: green;
+            color: white;
+        }
+
+        
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <h1>Todo App</h1>
+        <div class="todo_list">
+            <div class="todo_list_items">
+                <input class="input_todo" type="text" placeholder="Enter ToDo here"> 
+            <input class="input_date" type="date">
+            <input class="input_button" type="submit" value="Add">
+            </div>
+
+            <div class="list">
+                <p class="Task"></p>
+                <p class="Date"></p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    let arr = [];
+
+    let inputTodo = document.querySelector(".input_todo");
+    // console.log(inputTodo.value);
+    let inputDate = document.querySelector(".input_date");
+    let inputButton = document.querySelector(".input_button");
+    inputButton.addEventListener("click",()=>{
+        let obj = {
+            task : inputTodo.value,
+            date : inputDate.value
+        };
+
+        // console.log(obj);
+        arr.push([obj.task, obj.date]);
+        console.log(arr);
+
+        
+        let task_p = document.querySelectorAll(".Task");
+        let date_p = document.querySelectorAll(".Date")
+        
+        for(let i = 0; i < arr.length; i++){
+            task_p[i].innerText = arr[i][0];
+            date_p[i].innerText = arr[i][1];
+
+            console.log(arr[i][0]);
+            console.log(arr[i][1]);
+
+        }
+
+        inputTodo.value = "";
+        inputDate.value = "";
+
+         
+    });
+
+    
+
+</script>
+
+</html>
