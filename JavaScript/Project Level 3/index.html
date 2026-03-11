@@ -103,15 +103,17 @@
         console.log(arr);
 
         
-        let task_p = document.querySelectorAll(".Task");
-        let date_p = document.querySelectorAll(".Date")
+        let task_p = document.createElement("p");
+         
         
         for(let i = 0; i < arr.length; i++){
             task_p[i].innerText = arr[i][0];
-            date_p[i].innerText = arr[i][1];
+            document.body.appendChild(task_p);
+            // date_p[i].innerText = arr[i][1];
 
-            console.log(arr[i][0]);
-            console.log(arr[i][1]);
+            // console.log(arr[i][0]);
+            // console.log(arr[i][1]);
+            console.log(task_p[0]);
 
         }
 
