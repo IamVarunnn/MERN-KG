@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    // let alarm = () =>{
+    //     console.log(`The time is ${new Date().getSeconds()}`);
+    // }
+
+    
+
+    // let intervalId = setInterval(alarm,1000);
+
+    // clearInterval(intervalId);
+
+
+    let alarm = () =>{
+        console.log(`The time is ${new Date().getSeconds()}`);
+    }
+
+    
+
+    let intervalId = setInterval(alarm,1000);
+
+    setTimeout(()=>{
+        clearInterval(intervalId);
+    },2000);
+
+</script>
+
+</html>

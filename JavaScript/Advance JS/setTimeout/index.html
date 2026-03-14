@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    // let alarm = function(){
+    //     console.log("Hello Good Morning");
+    // }
+
+    // console.log("Iam first");
+
+    // setTimeout(alarm,2000);
+
+
+    // let alarm = ()=>{
+    //     console.log("Good Morning");
+    // };
+
+    // setTimeout(alarm, 2000);
+
+    // setTimeout(()=>{
+    //     console.log("Hello");
+    // },1000);
+
+
+    let alarm = () =>{
+        console.log("Hello");
+    }
+
+    let timerId = setTimeout(alarm, 1000);
+    console.log(timerId);
+
+    clearTimeout(timerId);
+
+</script>
+
+</html>
