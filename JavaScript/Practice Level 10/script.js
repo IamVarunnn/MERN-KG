@@ -19,6 +19,19 @@
 
 // runTwice(run());
 
+// 2
+
+let greeting = () =>{
+    console.log("Hello");
+}
+
+function runTwice(run){
+    run();
+    run();
+}
+
+runTwice(greeting);
+
 
 // 3
 
@@ -34,17 +47,17 @@
 
 //4 - 1
 
-let btn = document.querySelector("button");
+// let btn = document.querySelector("button");
 
-function doubled(){
-    let btn = document.querySelector("button");
+// function doubled(){
+//     let btn = document.querySelector("button");
 
-    btn.classList.add('btn_doubled');
-}
+//     btn.classList.add('btn_doubled');
+// }
 
-btn.addEventListener("click",()=>{
-    setTimeout(doubled, 2000);
-})
+// btn.addEventListener("click",()=>{
+//     setTimeout(doubled, 2000);
+// })
 
  
 
