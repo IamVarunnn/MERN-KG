@@ -3,75 +3,43 @@ let btn = document.querySelectorAll("button");
 
 
 for(let i = 0; i < btn.length; i++){
-    btn[i].addEventListener("click",()=>{
-        // console.log(btn[i].innerText);
-        // btn[i].src = `sounds/crash.mp3`;
-        let key = btn[i].innerText;
-
-         switch (key) {
+    
+    btn[i].addEventListener("click",(e)=>{
+        // console.log(e.target.innerText);
+        let key = e.target.innerText;
+        
+        switch (key) {
             case "w":
-                new Audio("sounds/tom-1.mp3").play();
+                let sound = new Audio(`sounds/tom-1.mp3`);
+                sound.play();
                 break;
 
             case "a":
-                new Audio("sounds/tom-2.mp3").play();
+                let asound = new Audio(`sounds/tom-2.mp3`);
+                asound.play();
                 break;
-
             case "s":
-                new Audio("sounds/tom-3.mp3").play();
+                let ssound = new Audio(`sounds/tom-3.mp3`);
+                ssound.play();
                 break;
-
             case "d":
-                new Audio("sounds/tom-4.mp3").play();
+                let dsound = new Audio(`sounds/tom-4.mp3`);
+                dsound.play();
                 break;
-
             case "j":
-                new Audio("sounds/snare.mp3").play();
+                let jsound = new Audio(`sounds/snare.mp3`);
+                jsound.play();
                 break;
-
             case "k":
-                new Audio("sounds/crash.mp3").play();
+                let ksound = new Audio(`sounds/crash.mp3`);
+                ksound.play();
                 break;
-
             case "l":
-                new Audio("sounds/kick.mp3").play();
+                let lsound = new Audio(`sounds/kick-bass.mp3`);
+                lsound.play();
+                break;
+            default:
                 break;
         }
     });
-
-    btn[i].addEventListener("keydown",(e)=>{
-        // console.log(btn[i].innerText);
-        // btn[i].src = `sounds/crash.mp3`;
-        let key = e.key;
-
-         switch (key) {
-            case "w":
-                new Audio("sounds/tom-1.mp3").play();
-                break;
-
-            case "a":
-                new Audio("sounds/tom-2.mp3").play();
-                break;
-
-            case "s":
-                new Audio("sounds/tom-3.mp3").play();
-                break;
-
-            case "d":
-                new Audio("sounds/tom-4.mp3").play();
-                break;
-
-            case "j":
-                new Audio("sounds/snare.mp3").play();
-                break;
-
-            case "k":
-                new Audio("sounds/crash.mp3").play();
-                break;
-
-            case "l":
-                new Audio("sounds/kick.mp3").play();
-                break;
-        }
-    });
-} 
+}
