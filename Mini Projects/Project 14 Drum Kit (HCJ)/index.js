@@ -10,7 +10,7 @@ for(let i = 0; i < btn.length; i++){
         
         makeSound(key);
         buttonAnimation(key);
-         
+        
     });
 }
 
@@ -18,6 +18,7 @@ for(let i = 0; i < btn.length; i++){
 document.addEventListener("keydown", function(event){
     makeSound(event.key);
     buttonAnimation(event.key);
+    
 })
 
 
@@ -57,17 +58,15 @@ function makeSound(key){
     }
 }
 
-
 function buttonAnimation(currentKey){
-    // let styleClass = document.querySelector(".set");
-    // let styleClass = document.querySelectorAll("button");
     let activeBtn = document.querySelector("." + currentKey);
 
+    // activeBtn.classList.add(".pressed" + currentKey);
+    // console.log(activeBtn.classList);
     activeBtn.classList.add("pressed");
 
     setTimeout(() => {
         activeBtn.classList.remove("pressed");
-    }, 2000);
-
-    
+    }, 100);
 }
+ 
