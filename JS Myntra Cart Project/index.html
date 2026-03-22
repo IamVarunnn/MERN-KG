@@ -15,46 +15,89 @@
             /* margin-left: 10%;
             margin-top: 30px; */
             margin: 40px 10%;
+            display: flex;
+            gap: 20px;
+            
         }
 
         .items{
-            width: 200px;
+            width: 250px;
+            border: 1px solid gray;
+          
         }
 
         .items_img{
             width: 100%;
+            /* margin: 10px; */
         }
 
         .ratings{
-
+            font-size: 12px;
+            font-weight: 700;
         }
 
         .company_name{
-
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1;
+            color: #282c3f;
+            margin-bottom: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .item_name{
-
+            color: #535766;
+            font-size: 14px;
+            line-height: 1;
+            margin-bottom: 0;
+            margin-top: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: 400;
+            display: block;
         }
 
         .price{
-
+            font-size: 14px;
+            line-height: 15px;
+            color: #282c3f;
+            white-space: nowrap;
+            margin-top: 10px;
         }
 
         .current_price{
-
+            font-size: 14px;
+            font-weight: 700;
+            color: #282c3f;
         }
 
         .original_price{
-
+            text-decoration: line-through;
+            color: #7e818c;
+            font-weight: 400;
+            margin-left: 5px;
+            font-size: 12px;
         }
 
         .discount{
-
+            color: #ff905a;
+            font-weight: 400;
+            font-size: 12px;
+            margin-left: 5px;
         }
 
-        .addToBadBtn{
-
+        .addToBagBtn{
+            margin-top: 8px;
+            font-size: 18px;
+            width: 100%;
+            background-color: lightgreen;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 10px;
         }
     </style>
 
@@ -109,7 +152,7 @@
 
         <div class="items_container">
 
-            <div class="items">
+            <!-- <div class="items">
                 <img class="items_img" src="images/cart_items/1.png" alt="item_image">                
                 <div class="ratings">
                     <span>4.5 ⭐ | 1.4k</span>
@@ -118,19 +161,19 @@
                 <div class="item_name">Rhodim-Plated CZ Floral Studs</div>
                 <div class="price">
                     <span class="current_price" >Rs 606</span> 
-                    <span class="original_prics" >Rs 1046</span> 
+                    <span class="original_price" >Rs 1046</span> 
                     <span class="discount" >42%</span>
                 </div>
                 <button class="addToBagBtn" >Add to Bag</button>
 
-            </div>
+            </div> -->
+            <!-- <div class="items"></div>
             <div class="items"></div>
             <div class="items"></div>
             <div class="items"></div>
             <div class="items"></div>
             <div class="items"></div>
-            <div class="items"></div>
-            <div class="items"></div>
+            <div class="items"></div> -->
 
         </div>
 
@@ -184,4 +227,6 @@
 
 
 </body>
+<script src="data/details.js" ></script>
+<script src="scripts/script.js" ></script>
 </html>
