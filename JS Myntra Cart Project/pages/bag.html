@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="bag.css">
+
+    <style>
+
+        
+        /* PAGE */
+        .cart-page {
+            width: 80%;
+            margin: 40px 10%;
+            display: flex;
+            gap: 20px;
+             
+        }
+
+        /* LEFT SIDE */
+        .cart-items {
+             display: flex;
+            flex-direction: row; 
+            flex: 2;
+        }
+
+        /* ITEM */
+        .cart-item {
+            display: flex;
+            border: 1px solid gray;
+            padding: 10px;
+            margin-bottom: 15px;
+              
+        }
+
+        /* IMAGE */
+        .left {
+            width: 120px;
+        }
+
+        .left img {
+            width: 100%;
+        }
+
+        /* RIGHT */
+        .right {
+            padding-left: 15px;
+        }
+
+        /* TEXT */
+        .company {
+            font-weight: 700;
+            color: #282c3f;
+        }
+
+        .name {
+            font-size: 14px;
+            color: #535766;
+        }
+
+        /* PRICE */
+        .price {
+            margin-top: 8px;
+        }
+
+        .current {
+            font-weight: 700;
+        }
+
+        .original {
+            text-decoration: line-through;
+            color: #7e818c;
+            margin-left: 5px;
+            font-size: 12px;
+        }
+
+        .discount {
+            color: #ff905a;
+            margin-left: 5px;
+            font-size: 12px;
+        }
+
+        /* EXTRA */
+        .extra {
+            font-size: 13px;
+            margin-top: 4px;
+            color: #535766;
+        }
+
+        /* REMOVE */
+        .remove {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* RIGHT SIDE */
+        .cart-summary {
+            flex: 1;
+        }
+
+        /* SUMMARY BOX */
+        .summary-box {
+            border: 1px solid gray;
+            padding: 15px;
+        }
+
+        /* ROW */
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+        }
+
+        /* TOTAL */
+        .total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+
+        /* BUTTON */
+        .order-btn {
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px;
+            background-color: lightgreen;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <header>
+
+        <nav>
+            <div class="logo">
+                <img src="../images/myntra_logo.webp" alt="">
+            </div>
+
+            <div class="navlinks">
+                <a href="#">MEN</a>
+                <a href="#">WOMEN</a>
+                <a href="#">KIDS</a>
+                <a href="#">HOME</a>
+                <a href="#">BEAUTY</a>
+                <a href="#">GENZ</a>
+                <a href="#" class="studio" >STUDIO <sup>NEW</sup> </a>
+            </div>
+
+            <div class="search_bar">
+                <span class="material-symbols-outlined">search</span><input type="text" placeholder="Search for products,brands and more">
+            </div>
+
+            <div class="actions_bar">
+
+               <div class="profile">
+                <a href=""><span class="material-symbols-outlined">person</span></a>
+                <span>Profile</span>
+               </div>
+
+               <div class="wishlist">
+                <a href=""><span class="material-symbols-outlined">favorite</span></a>
+                <span>Wishlist</span>
+               </div>
+<!-- 
+               <div class="cart">
+                
+               </div> -->
+
+               <div class="cart"  >
+                    <a href="pages/bag.html"><span class="material-symbols-outlined">shopping_cart</span></a>
+                    <span class="cart_name" >Cart</span>
+                    <span class="bag-item-count" >0</span>
+               </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+    <div class="cart-page">
+
+        <!-- LEFT SIDE (ITEMS) -->
+        <!-- <div class="cart-items">
+
+                <div class="cart-item">
+                    <div class="left">
+                        <img src="..//images/cart_items/4.png" alt="">
+                    </div>
+
+                    <div class="right">
+                        <div class="company">ADIDAS</div>
+                        <div class="name">Men Printed Jersey</div>
+
+                        <div class="price">
+                            <span class="current">Rs 999</span>
+                            <span class="original">Rs 1299</span>
+                            <span class="discount">20% OFF</span>
+                        </div>
+
+                        <div class="extra">14 days return available</div>
+                        <div class="extra">Delivery by 10 Oct</div>
+                    </div>
+
+                    <div class="remove">X</div>
+                </div>
+
+        </div> -->
+
+        <!-- RIGHT SIDE (SUMMARY) -->
+        <!-- <div class="cart-summary"> -->
+
+            <div class="summary-box">
+                <h3>PRICE DETAILS</h3>
+
+                <div class="row">
+                    <span>Total MRP</span>
+                    <span>Rs 1299</span>
+                </div>
+
+                <div class="row">
+                    <span>Discount</span>
+                    <span>-Rs 300</span>
+                </div>
+
+                <div class="row">
+                    <span>Delivery</span>
+                    <span>Rs 50</span>
+                </div>
+
+                <hr>
+
+                <div class="total">
+                    <span>Total Amount</span>
+                    <span>Rs 1049</span>
+                </div>
+            </div>
+
+            <button class="order-btn">PLACE ORDER</button>
+
+        </div>
+
+    </div>
+    <footer>
+
+        <div class="footer_container">
+
+            <div class="footer_column">
+                <h3>Online Shopping</h3>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+            </div>
+
+            <div class="footer_column">
+                <h3>Online Shopping</h3>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+            </div>
+
+            <div class="footer_column">
+                <h3>Online Shopping</h3>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div style="padding: 10px 0; text-align: end;" class="copyright">
+            @ 2023 www.myntra.com. All rights reserverd
+        </div>
+
+    </footer>
+
+    <script src="../data/details.js" ></script>
+    <script src="../scripts/script.js" ></script>
+    <script src="../scripts/bag.js" ></script>
+</body>
+</html>

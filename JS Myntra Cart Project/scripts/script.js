@@ -41,6 +41,9 @@ function displayItemsOnHomePage(){
     
     let items_container = document.querySelector(".items_container");
 
+    if(!items_container){
+        return;
+    }
 
     let innerHTML = '';
 
