@@ -146,3 +146,19 @@ nav{
     text-decoration: none;
     padding-bottom: 5px;
 }
+
+
+.bag-item-count{
+    background-color: #f16565;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 18px;
+    padding: 0px 6px;
+    position: relative;
+    border-radius: 50%;
+    font-size: 12px;
+    color: white;
+    left: 11px;
+    top: -52px;
+    font-weight: 700;
+}
