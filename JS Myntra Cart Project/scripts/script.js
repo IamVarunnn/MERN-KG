@@ -1,14 +1,19 @@
 
-let bagItems = [];
+let bagItems;
 onLoad();
 
 function onLoad(){
+    let bagItemsStr = localStorage.getItem('bagItems');
+
+    bagItems = bagItemsStr ? JSON.parse(bagItemsStr) : [];
+
     displayItemsOnHomePage();
     displayBagItems();
 }
 
 function addToBag(itemId){
     bagItems.push(itemId);
+    localStorage.setItem('bagItems',JSON.stringify(bagItems));
     displayBagItems();
 
      
